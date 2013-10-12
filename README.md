@@ -4,7 +4,7 @@ This repository includes the Eagle design files (schematics and layout) for our 
 mouse sensor with a 30x30 pixel resolution, 2000--6400 fps update rate, and SPI interface.
 
 This breakout board provides the necessary circuitry to communicate with the sensor using a microcontroller via SPI (5V).  The board uses 
-.1" spacing for easy mounting on a solderless breadboard. For more info on how to use the ADNS3080 optical mouse sensor for detecting optic floaw please visit:
+.1" spacing for easy mounting on a solderless breadboard. For more info on how to use the ADNS3080 optical mouse sensor for detecting optic flow please visit:
 [http://learn.acrobotic.com/ADNS3080][2]
 
 Product page
@@ -13,7 +13,7 @@ Please consider buying products from Acrobotic to help fund future Open-Source p
 
 [Tutorials, technical details, and more information about this product can be found here: http://acrobotic.com/catalog/product/view/id/66][1]
 
-We also [carry the standalone ADNS3080 module in our store!][3]
+We also [carry the standalone ADNS3080 chip in our store!][3]
 
 License Information
 ---

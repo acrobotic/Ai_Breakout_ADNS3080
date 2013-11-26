@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -85,7 +85,12 @@
 <layer number="110" name="lijnen" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="111" name="circles" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="112" name="hoeken" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="113" name="Route13" color="7" fill="1" visible="no" active="no"/>
 <layer number="116" name="Patch_BOT" color="9" fill="4" visible="yes" active="yes"/>
+<layer number="117" name="mPads" color="7" fill="1" visible="no" active="no"/>
+<layer number="118" name="mVias" color="7" fill="1" visible="no" active="no"/>
+<layer number="119" name="mUnrouted" color="7" fill="1" visible="no" active="no"/>
+<layer number="120" name="mDimension" color="7" fill="1" visible="no" active="no"/>
 <layer number="121" name="_tsilk" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="122" name="_bsilk" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="123" name="tTestmark" color="7" fill="1" visible="yes" active="yes"/>
@@ -94,15 +99,39 @@
 <layer number="126" name="_bNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="127" name="_tValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="128" name="_bValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="129" name="mtStop" color="7" fill="1" visible="no" active="no"/>
+<layer number="130" name="mbStop" color="7" fill="1" visible="no" active="no"/>
 <layer number="131" name="tAdjust" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="132" name="bAdjust" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="133" name="mtFinish" color="7" fill="1" visible="no" active="no"/>
+<layer number="134" name="mbFinish" color="7" fill="1" visible="no" active="no"/>
+<layer number="135" name="mtGlue" color="7" fill="1" visible="no" active="no"/>
+<layer number="136" name="mbGlue" color="7" fill="1" visible="no" active="no"/>
+<layer number="137" name="mtTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="138" name="mbTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="139" name="mtKeepout" color="7" fill="1" visible="no" active="no"/>
+<layer number="140" name="mbKeepout" color="7" fill="1" visible="no" active="no"/>
+<layer number="141" name="mtRestrict" color="7" fill="1" visible="no" active="no"/>
+<layer number="142" name="mbRestrict" color="7" fill="1" visible="no" active="no"/>
+<layer number="143" name="mvRestrict" color="7" fill="1" visible="no" active="no"/>
 <layer number="144" name="Drill_legend" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="145" name="mHoles" color="7" fill="1" visible="no" active="no"/>
+<layer number="146" name="mMilling" color="7" fill="1" visible="no" active="no"/>
+<layer number="147" name="mMeasures" color="7" fill="1" visible="no" active="no"/>
+<layer number="148" name="mDocument" color="7" fill="1" visible="no" active="no"/>
+<layer number="149" name="mReference" color="7" fill="1" visible="no" active="no"/>
 <layer number="150" name="Notes" color="7" fill="1" visible="no" active="yes"/>
 <layer number="151" name="HeatSink" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="152" name="_bDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="153" name="FabDoc1" color="6" fill="1" visible="no" active="no"/>
 <layer number="154" name="FabDoc2" color="2" fill="1" visible="no" active="no"/>
 <layer number="155" name="FabDoc3" color="7" fill="15" visible="no" active="no"/>
+<layer number="191" name="mNets" color="7" fill="1" visible="no" active="no"/>
+<layer number="192" name="mBusses" color="7" fill="1" visible="no" active="no"/>
+<layer number="193" name="mPins" color="7" fill="1" visible="no" active="no"/>
+<layer number="194" name="mSymbols" color="7" fill="1" visible="no" active="no"/>
+<layer number="195" name="mNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="196" name="mValues" color="7" fill="1" visible="no" active="no"/>
 <layer number="199" name="PSR2000 hulplijn" color="14" fill="1" visible="yes" active="yes"/>
 <layer number="200" name="200bmp" color="1" fill="10" visible="no" active="no"/>
 <layer number="201" name="201bmp" color="2" fill="1" visible="no" active="no"/>
@@ -169,7 +198,7 @@
 <wire x1="-0.508" y1="-1.524" x2="0.508" y2="-1.524" width="0.254" layer="94"/>
 <text x="-2.54" y="0" size="1.524" layer="96" ratio="15">&gt;VALUE</text>
 </symbol>
-<symbol name="LD1117">
+<symbol name="VREG">
 <wire x1="-6.35" y1="-7.62" x2="6.35" y2="-7.62" width="0.4064" layer="94"/>
 <wire x1="6.35" y1="-7.62" x2="6.35" y2="7.62" width="0.4064" layer="94"/>
 <wire x1="6.35" y1="7.62" x2="-6.35" y2="7.62" width="0.4064" layer="94"/>
@@ -217,7 +246,7 @@ Standard voltage regulator in SOT23-5 layout. Micrel part MIC5205x.x where x.x d
 Haven't tested the footprint on an actual board yet!
 &lt;/p&gt;</description>
 <gates>
-<gate name="G$1" symbol="LD1117" x="0" y="0"/>
+<gate name="G$1" symbol="VREG" x="0" y="0"/>
 </gates>
 <devices>
 <device name="" package="SOT23-5">
@@ -15371,6 +15400,29 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <wire x1="10.795" y1="1.27" x2="12.065" y2="1.27" width="0.2032" layer="21"/>
 <wire x1="12.7" y1="0.635" x2="12.7" y2="-0.635" width="0.2032" layer="21"/>
 </package>
+<package name="1X10-SMD">
+<wire x1="-12.7" y1="1.27" x2="12.7" y2="1.27" width="0.2032" layer="51"/>
+<wire x1="12.7" y1="-1.27" x2="-12.7" y2="-1.27" width="0.2032" layer="51"/>
+<wire x1="-12.7" y1="1.27" x2="-12.7" y2="-1.27" width="0.2032" layer="51"/>
+<wire x1="12.7" y1="1.27" x2="12.7" y2="-1.27" width="0.2032" layer="51"/>
+<wire x1="-12.7" y1="1.27" x2="-12.192" y2="1.27" width="0.2032" layer="21"/>
+<wire x1="-12.7" y1="1.27" x2="-12.7" y2="-1.27" width="0.2032" layer="21"/>
+<wire x1="-12.7" y1="-1.27" x2="-12.192" y2="-1.27" width="0.2032" layer="21"/>
+<wire x1="12.192" y1="-1.27" x2="12.7" y2="-1.27" width="0.2032" layer="21"/>
+<wire x1="12.7" y1="-1.27" x2="12.7" y2="1.27" width="0.2032" layer="21"/>
+<wire x1="12.7" y1="1.27" x2="12.192" y2="1.27" width="0.2032" layer="21"/>
+<smd name="1" x="-11.43" y="-2.032" dx="1.27" dy="5.334" layer="1"/>
+<smd name="2" x="-8.89" y="2.032" dx="1.27" dy="5.334" layer="1"/>
+<smd name="3" x="-6.35" y="-2.032" dx="1.27" dy="5.334" layer="1"/>
+<smd name="4" x="-3.81" y="2.032" dx="1.27" dy="5.334" layer="1"/>
+<smd name="5" x="-1.27" y="-2.032" dx="1.27" dy="5.334" layer="1"/>
+<smd name="6" x="1.27" y="2.032" dx="1.27" dy="5.334" layer="1"/>
+<smd name="7" x="3.81" y="-2.032" dx="1.27" dy="5.334" layer="1"/>
+<smd name="8" x="6.35" y="2.032" dx="1.27" dy="5.334" layer="1"/>
+<smd name="9" x="8.89" y="-2.032" dx="1.27" dy="5.334" layer="1"/>
+<smd name="10" x="11.43" y="2.032" dx="1.27" dy="5.334" layer="1"/>
+<text x="-13.208" y="-1.27" size="1.27" layer="25" font="vector" ratio="15" rot="R90">&gt;NAME</text>
+</package>
 </packages>
 <symbols>
 <symbol name="1X10">
@@ -15431,6 +15483,23 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <technology name=""/>
 </technologies>
 </device>
+<device name="SMD" package="1X10-SMD">
+<connects>
+<connect gate="M10X1" pin="1" pad="1"/>
+<connect gate="M10X1" pin="10" pad="10"/>
+<connect gate="M10X1" pin="2" pad="2"/>
+<connect gate="M10X1" pin="3" pad="3"/>
+<connect gate="M10X1" pin="4" pad="4"/>
+<connect gate="M10X1" pin="5" pad="5"/>
+<connect gate="M10X1" pin="6" pad="6"/>
+<connect gate="M10X1" pin="7" pad="7"/>
+<connect gate="M10X1" pin="8" pad="8"/>
+<connect gate="M10X1" pin="9" pad="9"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
 </devices>
 </deviceset>
 </devicesets>
@@ -15447,9 +15516,9 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <wire x1="1" y1="1" x2="1" y2="-1" width="0.2032" layer="21"/>
 <smd name="A" x="-2.15" y="0" dx="1.27" dy="1.47" layer="1" rot="R180"/>
 <smd name="C" x="2.15" y="0" dx="1.27" dy="1.47" layer="1"/>
-<text x="-2.54" y="1.778" size="1.27" layer="25" ratio="15">&gt;NAME</text>
+<text x="-2.54" y="1.778" size="1.27" layer="25" font="vector" ratio="15">&gt;NAME</text>
 </package>
-<package name="DIODE-1N914">
+<package name="TH-1N914">
 <wire x1="1.905" y1="1.27" x2="0.889" y2="1.27" width="0.254" layer="21"/>
 <wire x1="0.889" y1="1.27" x2="-1.905" y2="1.27" width="0.254" layer="21"/>
 <wire x1="-1.905" y1="1.27" x2="-1.905" y2="0" width="0.254" layer="21"/>
@@ -15476,10 +15545,11 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <text x="1.27" y="0" size="1.524" layer="95" ratio="15">&gt;NAME</text>
 <pin name="A" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
 <pin name="C" x="2.54" y="0" visible="off" length="short" direction="pas" rot="R180"/>
+<text x="-4.445" y="-3.175" size="1.524" layer="95" ratio="15">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="DIODE" prefix="D">
+<deviceset name="DIODE" prefix="D" uservalue="yes">
 <gates>
 <gate name="G$1" symbol="DIODE" x="0" y="0"/>
 </gates>
@@ -15493,7 +15563,7 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <technology name=""/>
 </technologies>
 </device>
-<device name="1N914" package="DIODE-1N914">
+<device name="TH-1N914" package="TH-1N914">
 <connects>
 <connect gate="G$1" pin="A" pad="A"/>
 <connect gate="G$1" pin="C" pad="C"/>
